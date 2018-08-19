@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>Basic Website</title>
-  <link rel="stylesheet" href="/css/app.css">
-</head>
-<body>
-  @yield('content')
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic Website</title>
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    @include('inc.navbar')
 
-  @include('inc.sidebar')
-
-</body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-8">  
+          @yield('content')
+        </div>  
+        <div class="col-md-4 col-lg-4">
+          @include('inc.sidebar')
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
